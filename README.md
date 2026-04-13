@@ -35,33 +35,35 @@ Note: The folder names yes and no will be used as the class labels by the model.
 Updating the Path in Code
 In the Python script, locate Line 12 and update the DATASET_PATH variable with the location of your folder.
 
-Windows: Use a raw string (r'...') to handle backslashes.
+•Windows: Use a raw string (r'...') to handle backslashes.
 
 dataset_path = r'C:\Users\YourName\Desktop\Brain_Dataset'
 
-macOS/Linux: Use standard forward slashes.
+•macOS/Linux: Use standard forward slashes.
 
 dataset_path = '/Users/YourName/Desktop/Brain_Dataset'
 
 🚀 How to Operate the Code
-Prepare Data: Ensure your images are organized in the yes and no folders.
-Run the Script: Execute the script via terminal:
+•Prepare Data: Ensure your images are organized in the yes and no folders.
+•Run the Script: Execute the script via terminal:
 
 python main.py
 
--Training Phase: The model will begin training for 20 epochs. You will see loss and accuracy metrics update in the console.
--Review Results: Once training is complete, a window will pop up showing Accuracy and Loss graphs.
--The model will automatically save as brain_tumor_detector.h5 in your project folder.
--Deployment: Use the saved .h5 file later to make predictions on new images without retraining.
+•Training Phase: The model will begin training for 20 epochs. You will see loss and accuracy metrics update in the console.
+•Review Results: Once training is complete, a window will pop up showing Accuracy and Loss graphs.
+•The model will automatically save as brain_tumor_detector.h5 in your project folder.
+•Deployment: Use the saved .h5 file later to make predictions on new images without retraining.
 
 
 🧠 Model Architecture
 the model is built using a sequential CNN architecture:
 
--Convolutional Layers: Extracts spatial features (edges, textures) from MRI scans.
--MaxPooling: Reduces dimensionality to focus on important features.
--Dropout (0.5): Prevents overfitting by randomly ignoring neurons during training.
--Sigmoid Activation: Ideal for binary classification (Tumor vs. No Tumor).
+•Convolutional Layers: Extracts spatial features (edges, textures) from MRI scans.
+•MaxPooling: Reduces dimensionality to focus on important features.
+•Dropout (0.5): Prevents overfitting by randomly ignoring neurons during training.
+•Sigmoid Activation: Ideal for binary classification (Tumor vs. No Tumor).
+
+
 📈 Tips for Better Performance
 dataset size: For best results, use at least 100–200 images per class. If you don't have a dataset, the "Brain MRI Images for Tumor Detection" dataset on Kaggle is highly recommended. imagery quality: Ensure images are clear and cropped to focus on brain area. alternative models: If higher accuracy is needed for complex datasets, consider Transfer Learning with pre-trained models like VGG16 or ResNet50.
 
