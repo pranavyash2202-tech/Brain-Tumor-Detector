@@ -57,7 +57,7 @@ dataset size: For best results, use at least 100–200 images per class. If you 
 ⚖️ Disclaimer
 the project is for educational purposes only and should not be used for professional medical diagnosis. Always consult healthcare professionals for medical concerns.
 
-About Me
+About Me--
 Name: Pranav Ranjan
 
 Registration No.: 25BAI10942
